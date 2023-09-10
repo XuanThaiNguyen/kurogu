@@ -3,11 +3,17 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {useState} from "react";
-import "react-quill/dist/quill.bubble.css";
-import ReactQuill from "react-quill";
 
 const Write = () => {
   const [open, setOpen] = useState(false);
+
+  // if (status === 'loading') {
+  //   return <div className={styles.loading}>Loading...</div>
+  // }
+
+  // if (status === 'authenticated') {
+  //   router.push('/')
+  // }
 
   return (
     <div className={styles.container}>
@@ -48,12 +54,12 @@ const Write = () => {
             </button>
           </div>
         )}
-        <ReactQuill
+        {/* <ReactQuill
           className={styles.textArea}
           theme="bubble"
           value={''}
           placeholder="Tell your story..."
-        />
+        /> */}
       </div>
       <button className={styles.publish}>
         Publish

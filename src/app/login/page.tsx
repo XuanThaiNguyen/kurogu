@@ -2,6 +2,16 @@
 import styles from "./page.module.css";
 
 const LoginPage = () => {
+  // const status = "unauthenticated";
+
+  // if (status === 'loading') {
+  //   return <div className={styles.loading}>Loading...</div>
+  // }
+
+  // if (status === 'authenticated') {
+  //   router.push('/')
+  // }
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
