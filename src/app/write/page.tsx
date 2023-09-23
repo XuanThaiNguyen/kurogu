@@ -3,9 +3,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {useState} from "react";
+import dynamic from "next/dynamic";
+import 'react-quill/dist/quill.snow.css';
+
+const ReactQuill = dynamic(() => import('react-quill'), {ssr: false})
 
 const Write = () => {
   const [open, setOpen] = useState(false);
+  const [_document, setDocument] = useState<any>(null);
 
   // if (status === 'loading') {
   //   return <div className={styles.loading}>Loading...</div>
@@ -54,12 +59,12 @@ const Write = () => {
             </button>
           </div>
         )}
-        {/* <ReactQuill
+        <ReactQuill
           className={styles.textArea}
           theme="bubble"
           value={''}
           placeholder="Tell your story..."
-        /> */}
+        />
       </div>
       <button className={styles.publish}>
         Publish
